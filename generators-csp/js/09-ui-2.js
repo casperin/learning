@@ -29,10 +29,11 @@ function listen (el, action) {
 // and sets up a loop that responds to new events.
 go(function* () {
     var el = document.getElementById('ui-box'),
-        ch = listen(el, 'mousemove');
+        ch = listen(el, 'mousemove'),
+        event;
 
     while (true) {
-        var event = yield take(ch);
+        event = yield take(ch);
 
         console.log(event.clientX, event.clientY);
     }

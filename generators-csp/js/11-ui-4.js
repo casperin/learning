@@ -32,33 +32,54 @@ function listen (el, action) {
 go(function* () {
     var el          = document.getElementById('ui-box'),
         body        = document.body,
+
+        // Notice that we aren't listening to events on the same element.
         mousedowns  = listen(el, 'mousedown'),
         mouseups    = listen(body, 'mouseup'),
         moves       = listen(body, 'mousemove'),
-        pos         = {x: 0, y: 0},
-        moving      = false,
+        pos         = {x: 0, y: 0},     // Our starting point.
+        moving      = false,            // Not moving initially.
         result, x, y, rect;
 
     while (true) {
+        // Again we use `csp.alts`, this time with three channels.
         result      = yield alts([mousedowns, mouseups, moves]);
         x           = result.value.clientX;
         y           = result.value.clientY;
 
+        // Then we handle each case separately:
         if (result.channel === mousedowns) {
             moving = true;
         } else if (result.channel === mouseups) {
             moving = false;
         } else if (moving) {
+            // Actually moving the element.
             rect = el.getBoundingClientRect();
-
             el.style.left = (rect.left + x - pos.x) + 'px';
             el.style.top = (rect.top + y - pos.y) + 'px';
         }
 
+        // Save the new mouse position.
         pos.x = x;
         pos.y = y;
     }
 });
 
+/**
+ *
+ * Notice how we can use the js-csp library, and our trusty `listen` function,
+ * to build fairly complex behavior in relatively few lines of code.
+ *
+ * More importantly, the way events are handled here maps very well to our
+ * minds. To quote James Long in his excellent article on the same topic:
+ *
+ *      Expressing UI interactions with alts maps extremely well to how we
+ *      intuitively think about them. It allows us to wrap events together into
+ *      a single event, and respond accordingly. No callbacks, no event
+ *      handlers, no tracking state across functions. We think about UI
+ *      interactions like this all the time, why not express your code the same
+ *      way?
+ *
+ */
 
 

@@ -28,15 +28,15 @@ go(function* () {
         // This time, we are interested in two types of events, so we are
         // working with two channels.
         clicksChannel   = listen(el, 'click'),
-        movesChannel    = listen(el, 'mousemove');
+        movesChannel    = listen(el, 'mousemove'),
+        result, x, y;
 
     while (true) {
         // When using `csp.alts` we don't just get the value (the event) out.
         // Instead we get an object like this: {channel: Channel, value: event}
-        var result = yield alts([clicksChannel, movesChannel]),
-            event = result.value,
-            x = event.clientX,
-            y = event.clientY;
+        result = yield alts([clicksChannel, movesChannel]);
+        x = result.value.clientX;
+        y = result.value.clientY;
 
         // Comparing the `.channel` of our result, we can figure out which
         // channel it comes from, and thus how we should handle it.

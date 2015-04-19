@@ -27,8 +27,10 @@ el.addEventListener('mousemove', function (event) {
 // Meanwhile, somewhere else, we take out the events of the channel and log
 // them to the console.
 go(function* () {
+    var event;
+
     while (true) {
-        var event = yield take(ch);
+        event = yield take(ch);
 
         console.log(event.clientX, event.clientY);
     }
