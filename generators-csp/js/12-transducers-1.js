@@ -1,7 +1,7 @@
 /* globals csp, console, transducers */
 
 /**
- * Work in progress. This throws an error, but I am unsure why.
+ * Work in progress.
  */
 
 var chan        = csp.chan,
@@ -15,9 +15,9 @@ var xAdd10 = transducers.map(function (x) {
 
 var c = chan(2, xAdd10);
 
-putAsync(c, 1);     // Throws!
+putAsync(c, 1);
 
 takeAsync(c, function (data) {
-    console.log('I got:', data);
+    console.log('I got:', data);    // I got: 11
 });
 
