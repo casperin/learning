@@ -27,7 +27,9 @@ var result1 = gen.next(); // {value: "give me a number!", done: false}
 // The generator is now paused at the first yield, waiting for something to
 // assign to `a`. Let's do that.
 
-gen.next(2); // {value: 3, done: true}
+var result2 = gen.next(2); // {value: 3, done: true}
+
+console.log(result2);
 
 // Since we reached a "return", we are now being told that done is true (so
 // calling it again will not give us anything more meaningful).
