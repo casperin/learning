@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * Here's a little more complex example of a broadcaster that sends messages,

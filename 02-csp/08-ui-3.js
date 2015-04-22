@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * Let's handle multiple "event streams" with one handler.

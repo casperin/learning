@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * `csp.chan` creates channels, used for communication (for passing messages).

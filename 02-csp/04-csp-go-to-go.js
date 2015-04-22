@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * Let's have one "go process" call out, and another respond to it.

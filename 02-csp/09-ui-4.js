@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * Let's build a simple drag and drop system. This requires handling three types of events:

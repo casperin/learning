@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * Here's simple setup for working with the ui. The advantages of using a

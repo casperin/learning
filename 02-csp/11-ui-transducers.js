@@ -1,22 +1,12 @@
-/* globals csp, console */
-
-/**
- *
- * This is the same setup, only more structured. The outcome is the same.
- *
- */
-
 var chan        = csp.chan,
     go          = csp.go,
     putAsync    = csp.putAsync,
     take        = csp.take;
 
-// We no longer have a "global" channel.
 
-// Reusable "listen" function that returns a channel where you can take out
-// events as they appear.
-function listen (el, action) {
-    var ch = chan();
+// Slight edit to the function so it can now take a channel.
+function listen (el, action, ch) {
+    ch = ch || chan();
 
     el.addEventListener(action, function (event) {
         putAsync(ch, event);
@@ -25,17 +15,22 @@ function listen (el, action) {
     return ch;
 }
 
+var getCoordinates = transducers.map(function (event) {
+    return {
+        x: event.clientX,
+        y: event.clientY
+    };
+});
+
 // Our "main" function. Asks the `listen` function to listen for mousemoves,
 // and sets up a loop that responds to new events.
 go(function* () {
     var el = document.getElementById('ui-box'),
-        ch = listen(el, 'mousemove'),
-        event;
+        ch = listen(el, 'mousemove', chan(1, getCoordinates));
 
     while (true) {
-        event = yield take(ch);
-
-        console.log(event.clientX, event.clientY);
+        // Logs the coordinates.
+        console.log(yield take(ch));
     }
 });
 

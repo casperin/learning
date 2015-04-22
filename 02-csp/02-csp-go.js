@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * Now let's have a look at how simple channels can be used together with

@@ -1,5 +1,3 @@
-/* globals csp, console */
-
 /**
  *
  * Infinite loops and generators and channels.
