@@ -13,9 +13,7 @@
  */
 
 // These are the functions we will be learning/using.
-var chan        = csp.chan,
-    putAsync    = csp.putAsync,
-    takeAsync   = csp.takeAsync;
+import {chan, putAsync, takeAsync} from 'js-csp';
 
 // First we create the channel for communication. Think of a "channel" as a
 // funnel, or a bucket, that we can put things into, and take things out of.

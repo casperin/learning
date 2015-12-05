@@ -1,7 +1,5 @@
-var chan        = csp.chan,
-    go          = csp.go,
-    putAsync    = csp.putAsync,
-    take        = csp.take;
+import transducers from 'transducers.js';
+import {chan, go, putAsync, take} from 'js-csp';
 
 
 // Slight edit to the function so it can now take a channel.

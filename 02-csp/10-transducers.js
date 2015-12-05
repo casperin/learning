@@ -10,9 +10,8 @@
  *
  */
 
-var chan        = csp.chan,
-    putAsync    = csp.putAsync,
-    takeAsync   = csp.takeAsync;
+import transducers from 'transducers.js';
+import {chan, putAsync, takeAsync} from 'js-csp';
 
 // Function that we wish to map over each value.
 function add10 (x) {

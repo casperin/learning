@@ -6,11 +6,13 @@
  */
 
 // Some shorthands that we will be using.
-var chan    = csp.chan,         // - Creates channels for communication.
-    go      = csp.go,           // - Wrapper function for out generators.
-    put     = csp.put,          // - Like putAsync in previous, only these
-    take    = csp.take,         //   works with generators.
-    timeout = csp.timeout;      // - Much like setTimeout(). See examples.
+import {
+    chan,         // - Creates channels for communication.
+    go,           // - Wrapper function for out generators.
+    put,          // - Like putAsync in previous, only these
+    take,         //   works with generators.
+    timeout       // - Much like setTimeout(). See examples.
+} from 'js-csp';
 
 // First we create a new channel that we will used throughout this example.
 var ch = chan();

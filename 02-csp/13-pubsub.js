@@ -1,12 +1,14 @@
 // Let's implement a simple pub/sub system with channels. We use a lot of channels for this. One, to
 // broadcast, and then one for each subscriber. The broadcaset, `broadcaster`, takes care of passing
 // messages from our `broadcast` channel, to each of the "out going" channels.
-var go      = csp.go,
-    chan    = csp.chan,
-    put     = csp.put,
-    putAsync= csp.putAsync,
-    take    = csp.take,
-    buffers = csp.buffers;
+import {
+    chan,
+    go,
+    put,
+    putAsync,
+    take,
+    buffers
+} from 'js-csp';
 
 
 // Takes a channel that it itself listens to.

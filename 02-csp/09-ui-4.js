@@ -10,11 +10,12 @@
  *
  */
 
-var chan        = csp.chan,
-    go          = csp.go,
-    putAsync    = csp.putAsync,
-    alts        = csp.alts;         // The new kid in class. We will be using
-                                    // it instead of `take`.
+import {
+    chan,
+    go,
+    putAsync,
+    alts
+} from 'js-csp';
 
 // Same function as in previous examples.
 function listen (el, action) {

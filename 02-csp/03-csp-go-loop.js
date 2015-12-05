@@ -5,11 +5,13 @@
  */
 
 // No new functions.
-var chan    = csp.chan,
-    go      = csp.go,
-    put     = csp.put,
-    take    = csp.take,
-    timeout = csp.timeout;
+import {
+    chan,
+    go,
+    put,
+    take,
+    timeout
+} from 'js-csp';
 
 // Our trusted channel.
 var ch = chan();

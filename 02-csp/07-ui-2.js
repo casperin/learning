@@ -4,10 +4,7 @@
  *
  */
 
-var chan        = csp.chan,
-    go          = csp.go,
-    putAsync    = csp.putAsync,
-    take        = csp.take;
+import { chan, go, putAsync, take } from 'js-csp';
 
 // We no longer have a "global" channel.
 

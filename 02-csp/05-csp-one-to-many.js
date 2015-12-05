@@ -6,11 +6,15 @@
  *
  */
 
-var chan    = csp.chan,
-    go      = csp.go,
-    put     = csp.put,
-    take    = csp.take,
-    timeout = csp.timeout;
+import {
+    chan,
+    go,
+    put,
+    take,
+    timeout,
+    CLOSED
+} from 'js-csp';
+
 
 var ch = chan();
 
@@ -37,7 +41,7 @@ function worker (name, pause) {
 
             // If the channel is empty and closed, then we break out of the
             // loop and thus terminate the function.
-            if (value === csp.CLOSED) {
+            if (value === CLOSED) {
                 break;
             } else {
                 // [insert some heavy working here...]
