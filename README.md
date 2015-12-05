@@ -20,6 +20,8 @@ Open `./index.js` in your editor and start uncommenting the files, one at a
 time. Read the source documentation of the file and edit it as you please. Once
 you get the hang of it, comment it out again and comment in the next file.
 
+You can view changes in the console output if you open `www/index.html`.
+
 Alternatively, you can just open each file here on Github and read.
 
 I've tried to make it as simple as possible, and then even simpler. To cut
@@ -29,8 +31,8 @@ request.
 
 ## Libraries
 
-- (js-csp)[https://github.com/ubolonton/js-csp]
-- (transducers.js)[https://github.com/jlongster/transducers.js]
+- [js-csp](https://github.com/ubolonton/js-csp)
+- [transducers.js](https://github.com/jlongster/transducers.js)
 
 ## Resources
 
