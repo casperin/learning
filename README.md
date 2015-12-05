@@ -6,15 +6,13 @@ it.
 
 ## How should I work with this?
 
-Clone the project (no, this is not an `npm` module). Then
+Clone the project, `npm install` to install modules, and finally `npm start` to
+start compiling files as you make changes.
 
 ```sh
+git clone https://github.com/casperin/learning.git
+cd learning
 npm install
-```
-
-and to run a server that compiles the files as you change them, do
-
-```sh
 npm start
 ```
 
