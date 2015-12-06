@@ -26,3 +26,5 @@ getSix()
     .then(six => console.log('got', six))
     .catch(err => console.log('catch', err));
 
+async function* getStocks() {
+}

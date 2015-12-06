@@ -11,7 +11,7 @@ import 'babel-polyfill';
 
 // import './02-csp/01-csp-basic.js';
 // import './02-csp/02-csp-go.js';
-//  import './02-csp/03-csp-go-loop.js';
+// import './02-csp/03-csp-go-loop.js';
 // import './02-csp/04-csp-go-to-go.js';
 // import './02-csp/05-csp-one-to-many.js';
 // import './02-csp/06-ui.js';
@@ -28,3 +28,5 @@ import 'babel-polyfill';
 // import './03-async/03-failing-await.js';
 // import './03-async/04-bubbling-error.js';
 // import './03-async/05-stacking-async.js';
+
+import './04-async-generator/01-basic.js';

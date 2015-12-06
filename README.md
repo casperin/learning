@@ -29,6 +29,17 @@ everything irrelevant away when introducing new concepts. Then build upon them.
 Slowly. If you feel you can improve upon that, then by all means, send a pull
 request.
 
+## Ideas for exploration
+
+* Observables and Streams.
+* Type annotations -- I'm honestly a little out of the loop on this one.
+* [ServiceWorkers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+  -- I actually have done a lot of work on this. It's somewhere on the computer,
+  so just needs to be documented and added to the repo.
+* [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) -- It's
+  faster than `svg`. I've noticed that people start making icons and stuff in
+  svg, but why aren't they making them in `canvas` instead?
+
 ## Libraries
 
 - [js-csp](https://github.com/ubolonton/js-csp)
