@@ -29,4 +29,3 @@ import 'babel-polyfill';
 // import './03-async/04-bubbling-error.js';
 // import './03-async/05-stacking-async.js';
 
-import './04-async-generator/01-basic.js';
